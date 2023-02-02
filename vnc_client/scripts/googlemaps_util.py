@@ -56,7 +56,7 @@ def sendGoogleDirectionsRequest(origin, dest):
     dLat = ("{0:.5f}".format(dest['latitude']))
     dLong = ("{0:.5f}".format(dest['longitude']))
 
-    key = "AIzaSyDTnFEvZN10E6wmaCyjkkIIX7l5TNYiLGo"
+    key = "AIzaSyCh7nN1Rt3MjxzD-_jwVApgz1voFesmpnQ"
     url = "https://maps.googleapis.com/maps/api/directions/json"
     params = {
         'origin': oLat + "," + oLong,
@@ -76,6 +76,7 @@ def sendGoogleDirectionsRequest(origin, dest):
 
     return response
 
+##NEw function that returns a polyline between two points
 
 # def getGoogleMapPath(nameOrigin, nameDest):
 #     """

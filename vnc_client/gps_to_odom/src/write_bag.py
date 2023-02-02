@@ -4,6 +4,7 @@ import tf
 import math
 import os.path
 from os import path
+from test_build_path.msg import *
 from custom_msgs.msg import *
 from std_msgs.msg import Header
 from nav_msgs.msg import Path
@@ -134,7 +135,7 @@ def write_bag_file(name, drive_data, odom_data):
     print("Hello")
 
     #Open up a second bag file to write our MarkersArray to 
-    markerBag = rosbag.Bag('/home/chloe/record_for_repay.bag', 'w')
+    markerBag = rosbag.Bag('/home/napontin/path.bag', 'w')
 
     markerBag.write('/ecoprt/path/auto', Path_msg)
     markerBag.close()  

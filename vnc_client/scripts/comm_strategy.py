@@ -20,7 +20,7 @@ formatter = logging.Formatter('%(asctime)s - %(name)s - %(module)s - %(levelname
 ch = logging.StreamHandler()
 ch.setLevel(logging.DEBUG)
 ch.setFormatter(formatter)
-logging_path = os.path.dirname(os.path.realpath(__file__)).split("src/")[0] + "/src/client_log"
+logging_path = "C:\\Users\\alajd\\git\\2022SpringTeam01-EcoPRT\\src\\vnc_server\\client_log"
 fh = logging.FileHandler(logging_path)
 fh.setLevel(logging.DEBUG)
 fh.setFormatter(formatter)
@@ -76,7 +76,7 @@ def OdomCallBack(data, strategy):
     heading = data.heading_angle
 
     # Persist the relevant odometry information to our Vehicle object
-    #self.vehicle.setLocation(lat, lon)
+    # self.vehicle.setLocation(lat, lon)
     strategy.vehicle.setSteering(steering)
     strategy.vehicle.setHeading(heading)
 
@@ -132,18 +132,13 @@ class GoodStrategy(CommStrategy):
         # update GoodStrategy.Vehicle
 
         rospy.Subscriber("/ecoprt/odom", VehicleOdomInfo, OdomCallBack, (self))
-        rospy.Subscriber("/ecoprt/gps/rover_sat_info", NavSatFix, self.DirectGPSUpdater, queue_size=10)
 
         # Create our Joy publisher to change the Vehicle state
         self.joyPub = rospy.Publisher("/ecoprt/joy", Joy, queue_size=10)
 
         rospy.spin()
 
-    def DirectGPSUpdater(self, data):
-        '''Function to update the Latitude, Longitude and Altitude when it is updated by the Swift GPS'''
-        Vehicle.setLocation(data.latitude, data.longitude)
 
-    
     # Starts communication with the VNC. Sends the current internal state representation of this vehicle to the server
     def startClient(self, theClient):
         logger.debug('GoodStrategy.startClient()')
@@ -156,7 +151,7 @@ class GoodStrategy(CommStrategy):
             logger.info("Sending InitRequest to Server")
             initRequest = InitRequest(self.vehicle.getDict())
             initRequest.send(self.sock)
-            print(self.sock)
+
             initAck = Command.recv(self.sock)
             logger.info("Received InitAcknowledge from Server")
 

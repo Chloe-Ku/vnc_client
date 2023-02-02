@@ -7,16 +7,14 @@ from time import sleep
 
 # from communication import Communication
 from comm_strategy import GoodStrategy
-import rospy
+
 
 class VehicleClient(object,):
     # Define the host and port to connect to
-    host = '10.155.32.232'
+    host = 'localhost'
     port = 12345
 
     def __init__(self):
-        self.node = rospy.init_node("VNC_Client", anonymous=False)
-        
         # Create the socket
         try:
             # AF_INET means IPv4, SOCK_STREAM means TCP
