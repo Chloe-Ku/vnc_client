@@ -1,0 +1,3 @@
+<launch>
+	<node name="VNC_Client" pkg="vnc_client" type="vehicle_client.py" output="screen"/>
+</launch>

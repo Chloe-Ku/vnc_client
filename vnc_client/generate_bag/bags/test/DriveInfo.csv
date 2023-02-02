@@ -1,0 +1,2 @@
+rosbagTimestamp,header,seq,stamp,secs,nsecs,frame_id,power_on,steering_left,steering_right,throttle_right,throttle_left,brake_front_right,brake_front_left,brake_rear_right,brake_rear_left,wheel_speed_front_left,wheel_speed_front_right,wheel_speed_rear_left,wheel_speed_rear_right
+1588383349913912057,,0,,1588383349,878695011,'',True,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0

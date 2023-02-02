@@ -1,0 +1,14 @@
+Header header
+bool power_on
+float32 steering_left
+float32 steering_right
+float32 throttle_right
+float32 throttle_left
+float32 brake_front_right
+float32 brake_front_left
+float32 brake_rear_right
+float32 brake_rear_left
+float32 wheel_speed_front_left
+float32 wheel_speed_front_right
+float32 wheel_speed_rear_left
+float32 wheel_speed_rear_right

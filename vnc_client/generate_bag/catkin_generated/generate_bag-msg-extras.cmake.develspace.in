@@ -1,0 +1,2 @@
+set(generate_bag_MESSAGE_FILES "/home/ubuntu/catkin_ws/src/2020SpringTeam22/src/generate_bag/msg/DriveInfo.msg;/home/ubuntu/catkin_ws/src/2020SpringTeam22/src/generate_bag/msg/Odom.msg")
+set(generate_bag_SERVICE_FILES "")
